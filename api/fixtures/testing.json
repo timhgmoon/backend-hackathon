@@ -1,0 +1,23 @@
+[
+  {
+    "model": "api.attendees",
+    "pk": 1,
+    "fields": {
+      "name": "Bob Ross",
+      "phone": "453-848156",
+      "address": "4010 Electric Av.",
+      "city": "Las Vegas",
+      "state": "Nevada",
+      "country": "United States",
+      "postalZip": "34556",
+      "email": "HappyTrees@happyclouds.edu",
+      "Company": "Apple",
+      "companyFunded": 82.16,
+      "userID": "DO19252537151321083934722339",
+      "team": 6,
+      "paid": true,
+      "date": "02/23",
+      "title": "CustomerSuccess"
+    }
+  }
+]
