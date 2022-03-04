@@ -19,9 +19,14 @@ class AttendeeView(APIView):
 
   def put(self, request, pk):
     attendee = get_object_or_404(Attendee, pk=pk)
-    data = AttendeeSerializer(attendee, data=request.data)
+    data = AttendeeSerializer(attendee, data=request.data, partial=True)
     if data.is_valid():
       data.save()
       return Response(data.data, status=status.HTTP_202_ACCEPTED)
     return Response(data.errors, status=status.HTTP_400_BAD_REQUEST)
   
+  def delete(self, request, pk):
+    attendee = get_object_or_404(Attendee, pk=pk)
+    data = AttendeeSerializer(attendee).data
+    attendee.delete()
+    return Response(data)
